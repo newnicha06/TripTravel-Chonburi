@@ -74,9 +74,130 @@
   }
   
   *{
-    font-family: "Athiti", sans-serif; /* ใส่ฟ้อนต์ */
+    font-family: "Mali", cursive; /* ใส่ฟ้อนต์ */
   }
 
   body {
-    background-color: #ffffff; /* ใส่สีพื้นหลัง */
+    background-color: #ffffff; /* ใส่สีพื้นหลัง #f0f8ff */
+   
 }
+
+/* Animation for zoom in and out loop */
+@keyframes zoomInOut {
+  0% {
+      transform: scale(1); /* Original size */
+  }
+  50% {
+      transform: scale(1.1); /* Zoom in */
+  }
+  100% {
+      transform: scale(1); /* Zoom out to original size */
+  }
+}
+
+/* Add the zoom loop animation */
+.zoom-loop {
+  animation: zoomInOut 2s infinite ease-in-out; /* Duration and looping */
+}
+
+/* Additional styles (for reference) */
+.category-header {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.category-title {
+  transition: color 0.3s ease;
+}
+
+.category-header:hover {
+  background-color: #e3f2fd;
+}
+
+.category-title:hover {
+  color: #007bff;
+}
+
+.category-link {
+  transition: all 0.3s ease;
+}
+
+.category-link:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.card-img-custom {
+  height: 300px; /* กำหนดความสูงที่เท่ากัน */
+  width: 100%; /* ทำให้ภาพมีความกว้างเต็มคอนเทนเนอร์ */
+  object-fit: cover; /* ทำให้ภาพถูกครอบในขนาดที่กำหนดโดยไม่บิดเบือน */
+}
+
+.card-img-top {
+  height: 300px; /* กำหนดความสูงของภาพ */
+  object-fit: cover; /* ปรับภาพให้ครอบคลุมพื้นที่โดยไม่บิดเบี้ยว */
+  width: 100%; /* ให้ภาพเต็มความกว้างของการ์ด */
+}
+
+.dropdown-item:hover {
+  background-color: #d9d9d9; /* สีพื้นหลังเมื่อ hover */
+  color: #000; /* สีตัวอักษรเมื่อ hover */
+}
+
+.card-hover {
+  transition: transform 0.5s ease; 
+}
+
+.card-hover:hover {
+  transform: scale(1.10);
+}
+
+.card {
+  overflow: hidden; 
+}
+
+.card-hover {
+  transition: transform 0.5s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.10); 
+}
+
+.card-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.card-link:hover .card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.card {
+  transition: box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+/* เอฟเฟกต์ Hover สำหรับภาพในการ์ด */
+.card-img-top {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* ใช้การเปลี่ยนแปลงแบบ smooth */
+}
+
+.card-img-top:hover {
+  transform: scale(1.1); /* ซูมเข้าเมื่อ hover */
+  opacity: 0.8; /* ลดความเข้มของภาพเล็กน้อย */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaHFQeP5ahKpkrMUitKTVlK9HkxezV-LZKv7aRyAstyJXjgdkthBMXJYsJjgZ239kiDIM&usqp=CAU);
+  background-size: cover; /* ปรับให้รูปภาพขยายเต็มพื้นที่ */
+  background-position: center; /* จัดรูปให้อยู่ตรงกลาง */
+  background-repeat: no-repeat; /* ป้องกันการทำซ้ำของรูปภาพ */
+  background-attachment: fixed; /* ทำให้ background ยึดอยู่กับหน้าจอ */
+}
+
+
